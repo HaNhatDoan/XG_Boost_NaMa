@@ -1,0 +1,72 @@
+ * Serving Flask app 'app' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://112.78.3.35:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 659-218-211
+171.244.211.69 - - [24/May/2021 13:48:13] "[32mGET / HTTP/1.1[0m" 302 -
+171.244.211.69 - - [24/May/2021 13:48:13] "GET /home HTTP/1.1" 200 -
+117.2.48.169 - - [24/May/2021 13:48:26] "GET /home HTTP/1.1" 200 -
+117.2.48.169 - - [24/May/2021 13:48:27] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+171.244.211.69 - - [24/May/2021 13:50:07] "GET /home HTTP/1.1" 200 -
+171.244.211.69 - - [24/May/2021 13:50:07] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+117.2.48.169 - - [24/May/2021 13:50:20] "POST /survey HTTP/1.1" 200 -
+171.244.211.69 - - [24/May/2021 13:51:50] "GET /getInfo HTTP/1.1" 200 -
+117.2.48.169 - - [24/May/2021 14:15:40] "[32mGET / HTTP/1.1[0m" 302 -
+117.2.48.169 - - [24/May/2021 14:15:40] "GET /home HTTP/1.1" 200 -
+117.2.48.169 - - [24/May/2021 15:32:28] "GET /home HTTP/1.1" 200 -
+ * Serving Flask app 'app' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+Traceback (most recent call last):
+  File "app.py", line 497, in <module>
+    app.run(host='0.0.0.0',port=5000,debug=True)
+  File "/home/vietvh9/envs/hospital/lib/python3.6/site-packages/flask/app.py", line 922, in run
+    run_simple(t.cast(str, host), port, self, **options)
+  File "/home/vietvh9/envs/hospital/lib/python3.6/site-packages/werkzeug/serving.py", line 982, in run_simple
+    s.bind(server_address)
+OSError: [Errno 98] Address already in use
+ * Serving Flask app 'app' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+Traceback (most recent call last):
+  File "app.py", line 497, in <module>
+    app.run(host='0.0.0.0',port=5000,debug=True)
+  File "/home/vietvh9/envs/hospital/lib/python3.6/site-packages/flask/app.py", line 922, in run
+    run_simple(t.cast(str, host), port, self, **options)
+  File "/home/vietvh9/envs/hospital/lib/python3.6/site-packages/werkzeug/serving.py", line 982, in run_simple
+    s.bind(server_address)
+OSError: [Errno 98] Address already in use
+ * Serving Flask app 'app' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+Traceback (most recent call last):
+  File "app.py", line 497, in <module>
+    app.run(host='0.0.0.0',port=5000,debug=True)
+  File "/home/vietvh9/envs/hospital/lib/python3.6/site-packages/flask/app.py", line 922, in run
+    run_simple(t.cast(str, host), port, self, **options)
+  File "/home/vietvh9/envs/hospital/lib/python3.6/site-packages/werkzeug/serving.py", line 982, in run_simple
+    s.bind(server_address)
+OSError: [Errno 98] Address already in use
+ * Serving Flask app 'app' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://112.78.3.35:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 648-448-013
