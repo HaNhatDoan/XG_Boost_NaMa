@@ -4,9 +4,6 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 import time
 
-
-
-
 class ModelCreator():
 
     def __init__(self, config, patient_ID = None, mode = 'train'):
@@ -34,8 +31,6 @@ class ModelCreator():
         elif mode == 'train':
             self.model = model = xgb.XGBClassifier(random_state=2, max_depth=10, learning_rate=0.1, importance_type='gain')
 
-
-
     def edu_level(self,item):
         levels = ['mù chữ','thcs','thpt','trung cấp, cao đẳng','đại học trở lên']
         try:
@@ -45,8 +40,6 @@ class ModelCreator():
 
     def preprocess_data(self):
         # Tính tuổi từ năm sinh
-
-         # Ví dụ:
         self.data["Nam_Sinh"] = self.data["NAMSINH"].apply(lambda x: time.localtime().tm_year - int(x))
 
         self.data["KhuVuc"] = self.data["KHUVUC"].astype('category')
@@ -59,9 +52,7 @@ class ModelCreator():
         self.data["So_Lan_Mang_Thai"] = self.data["SOLANMAN"]
         self.data["So_Lan_Sinh_Con"] = self.data["SOCONSINH"]
 
-        # Có thể tiền sử tránh thai tổng hợp 1 cột
-        # Nếu có nhiều cột tiền sử tránh thai, bạn có thể xử lý chuyển sang dạng phù hợp, ví dụ:
-        self.data["Tien_Su_Tranh_Thai"] = self.data["TRANHTHA"]  # hoặc tổng hợp logic khác nếu có nhiều cột
+        self.data["Tien_Su_Tranh_Thai"] = self.data["TRANHTHA"] 
 
         self.data["Tien_Su_Gia_Dinh"] = self.data["TIENSUGD"]
         self.data["Tien_Su_MangThai"] = self.data["TIENSUMT"]
@@ -70,9 +61,6 @@ class ModelCreator():
     def train(self):
         train, valid = train_test_split(self.data, test_size=0.1, random_state=7, stratify=self.data['Label'])
         valid, test = train_test_split(valid, test_size=0.3, random_state=7, stratify=valid['Label'])
-
-
-
         self.model.fit(train[self.config.training_features], train['Label'])
         self.model.save(self.config.model_checkpoint_path)
 
